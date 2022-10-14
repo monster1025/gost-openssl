@@ -18,8 +18,3 @@
 ```
 openssl pkcs12 -in p12.pfx -out p12.pem
 ```
-
-
-
-
-git@github.com:monster1025/gost-openssl.git
