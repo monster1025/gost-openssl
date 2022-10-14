@@ -16,7 +16,7 @@
 Этот pfx подсовывается в докер и из него экспортируется приватный ключ.  
   
 ```
-docker run -it -v `pwd`:/cert gost-openssl_cert
+docker run -it -v `pwd`/cert:/cert gost-openssl_cert
 
 openssl pkcs12 -in p12.pfx -out p12.pem
 ```
