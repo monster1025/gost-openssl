@@ -18,3 +18,6 @@
 ```
 openssl pkcs12 -in p12.pfx -out p12.pem
 ```
+
+### Собранный образ
+https://hub.docker.com/repository/docker/monster1025/gost_cert
