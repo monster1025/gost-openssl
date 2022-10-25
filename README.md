@@ -23,3 +23,12 @@ openssl pkcs12 -in p12.pfx -out p12.pem
 
 ### Собранный образ
 https://hub.docker.com/repository/docker/monster1025/gost_cert
+
+### Команды для конвертации сертификата в нужные ключи:
+https://habr.com/ru/post/550664/
+
+```
+openssl pkcs12 -in auth.p12 -out key.pem -engine gost -nodes -clcerts
+openssl pkcs12 -in auth.p12 -clcerts -nokeys -out pub.crt
+openssl smime -sign -signer pub.crt -inkey key.pem -engine gost -binary -noattr -outform DER -in document.pdf -out document.pdf.sig
+```
