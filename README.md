@@ -32,3 +32,7 @@ openssl pkcs12 -in auth.p12 -out key.pem -engine gost -nodes -clcerts
 openssl pkcs12 -in auth.p12 -clcerts -nokeys -out pub.crt
 openssl smime -sign -signer pub.crt -inkey key.pem -engine gost -binary -outform DER -in document.pdf -out document.pdf.sig
 ```
+or 
+```
+openssl cms -sign -engine gost -inkey key.pem -signer pub.crt -in document.xml -binary -outform DER -out document.xml.sgn
+```
