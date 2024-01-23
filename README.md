@@ -38,5 +38,5 @@ openssl cms -sign -engine gost -inkey key.pem -signer pub.crt -in document.xml -
 ```
 or with cades support
 ```
-openssl cms -sign -engine gost -inkey key.pem -cades -signer pub.crt -in document.xml -binary -outform DER -out document.xml.sgn
+openssl cms -sign -engine gost -inkey key.pem -cades -nosmimecap -signer pub.crt -in document.xml -binary -outform DER -out document.xml.sgn
 ```
