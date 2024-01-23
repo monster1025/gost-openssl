@@ -36,3 +36,7 @@ or
 ```
 openssl cms -sign -engine gost -inkey key.pem -signer pub.crt -in document.xml -binary -outform DER -out document.xml.sgn
 ```
+or with cades support
+```
+openssl cms -sign -engine gost -inkey key.pem -cades -signer pub.crt -in document.xml -binary -outform DER -out document.xml.sgn
+```
